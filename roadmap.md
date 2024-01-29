@@ -1,6 +1,3 @@
-Certainly! Here's a sample `roadmap.md` file that outlines your future plans and vision for the Interview Simulator AI project:
-
----
 
 # Interview Simulator AI Roadmap
 
