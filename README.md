@@ -1,6 +1,3 @@
-Certainly! Creating a compelling and informative README.md file is crucial for attracting contributors to your open-source project. Here's a template you can use as a starting point for your Interview Simulator AI project:
-
----
 
 # Interview Simulator AI
 
