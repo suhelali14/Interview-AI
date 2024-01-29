@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    {% block css %}{% endblock css %}
+</head>
+<body>
+  <div class="container">
+   <main>
+      {% block container %}{% endblock container %}
+
+      
+
+   </main>
+
+   <div id="sidebar">
+        <div >
+            <a href="newchat"><img src="/static/plus.png"class="navicons" id="navicons"><a/>
+        </div>
+        <div >
+            <a href="dashboard"><img src="/static/profile.png" class="navicons" id="navicons"></a>
+        </div>
+        <div >
+            <a href="dashboard"><img src="/static/information.png" class="navicons" id="navicons"></a>
+        </div>
+        <div >
+            <a href="results"><img src="/static/profiles.png" class="navicons" id="navicons"></a>
+        </div>
+
+   </div>
+   <footer></footer>
+  </div>
+</body>
+<script>
+			/* JS comes here */
+		    function runSpeechRecognition() {
+		        // get output div reference
+		        var output = document.getElementById("speechToText");
+		        // get action element reference
+		        var action = document.getElementById("action");
+            var submit = document.getElementById("submit")
+                // new speech recognition object
+                var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+                var recognition = new SpeechRecognition();
+            
+                // This runs when the speech recognition service starts
+                recognition.onstart = function() {
+                    action.innerHTML = "<small>listening, please speak...</small>";
+                };
+                
+                recognition.onspeechend = function() {
+                    action.innerHTML = "<small>stopped listening, hope you are done...</small>";
+                    recognition.stop();
+                    submit.click();
+                }
+              
+                // This runs when the speech recognition service returns result
+                recognition.onresult = function(event) {
+                    var transcript = event.results[0][0].transcript;
+                    var confidence = event.results[0][0].confidence;
+                    output.value =transcript ;
+                    output.classList.remove("hide");
+                };
+              
+                 // start recognition
+                 recognition.start();
+	        }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/static/chatbot.js"></script>
+<script src="/static/response.js"></script>
+<script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+</html>
+
+
+
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Results{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/results.css">{% endblock css %}
+{% block container %}
+        
+
+        <div class="containet" style="width:75%;">
+            
+            {% for conversation in interview %}
+                    <h1>Interview No: {{ forloop.counter }}</h1>
+                    {% if forloop.last %}
+                        <span class="data-list"><h3 id="feedback">{{ conversation.result }}</h3></span>
+                    {% else %}
+                        <span class="data-list"><h3 id="feedback">{{ conversation.result }}</h3></span>
+                    {% endif %}
+            {% endfor %}
+        </div>
+
+        <script>
+        window.onload = function () {
+            var feedback = document.getElementById("feedback");
+            var feedbackText = feedback.textContent;
+
+            // Split the feedback text into individual points
+            var feedbackPoints = feedbackText.split("1. ");
+            feedbackPoints.shift(); // Remove the empty element at the beginning
+
+            // Create an unordered list to display the points
+            var feedbackList = document.createElement("ul");
+
+            // Add each point as a list item
+            feedbackPoints.forEach(function (point) {
+                var listItem = document.createElement("li");
+                listItem.textContent = point;
+                feedbackList.appendChild(listItem);
+            });
+
+            // Replace the original feedback text with the list
+            feedback.textContent = ""; // Clear the original text
+            feedback.appendChild(feedbackList);
+        };
+    </script>
+{% endblock container %}

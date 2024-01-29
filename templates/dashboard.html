@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="/static/dashboard.css">{% endblock css %}
+{% block container %}
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Interviews</span>
+                        <span class="number">
+                                {% for conversation in  interview  %}
+                            
+                                    {% with forloop.counter as counter %}
+                                        {% with counter|add:1 as next_value %}
+                                            {% if forloop.last %}
+                                            <span class="data-list">{{counter}}</span>
+                                            {% else %}
+                                                <span class="data-list"></span>
+                                            {% endif %}
+                                        {% endwith %}
+                                    {% endwith %}
+                                {% endfor %}
+                        </span>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Interviews</span>
+                       
+                        {% for conversation in  interview  %}
+                            
+                            {% with forloop.counter as counter %}
+                                {% with counter|add:1 as next_value %}
+                                    {% if forloop.last %}
+                                       <span class="data-list">Interview {{counter}}</span>
+                                    {% else %}
+                                        <span class="data-list">Interview {{counter}}</span>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endwith %}
+                        {% endfor %}
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Time</span>
+                        {% for conversation in  interview  %}
+                        <span class="data-list">{{conversation.created_time}}</span>
+                        {% endfor %}
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+{% endblock container %}

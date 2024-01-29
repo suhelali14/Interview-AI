@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block container %}
+ <img src="/static/Troi.ai.svg" id="homelogo" alt="logo">
+<div class="chatbox">
+       
+        
+        <div class="chat-container">
+            <!-- Messages -->
+            <div id="chatbox">
+                
+                <p id="botStarterMessage" class="botText"><span><div class="block">
+                      <div id="output" class="hide">
+                      <p>Click on the below button and speak something... <span id="action"></span></p>
+
+                      {% if result is NULL %}
+                      <h1>Let's get started...</h1>
+                      {% else %}
+                      <h1>"{{result}}"</h1>
+                      <audio  autoplay  src="./static/audio/output.mp3"></audio>
+                      {% endif %}
+                  </div></span></p>
+            </div>
+    
+            <!-- User input box -->
+        <section>
+
+            <div class="chat-bar-input-block">
+                <button class="micbtn" onclick="runSpeechRecognition()">
+                    <lord-icon
+                    src="https://cdn.lordicon.com/jibstvae.json"
+                    trigger="click"
+                    stroke="bold"
+                    colors="primary:#000000,secondary:#000000"
+                    style="width:38px;height:38px">
+                    </lord-icon>
+               </button>
+         
+            
+               <div id="userInput">
+                   
+                               <form action="run_prompt" method="POST" class="form2" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                        <div class="mb-3">
+                                            
+                                            <input id="speechToText" class="input-box" type="text" name="prompt" placeholder="Talk to Troi">
+                                            
+                                        </div>
+                                        <div class="chat-bar-icons">
+                                            <button class="arrowbtn" type="submit" id="submit">
+                                                <lord-icon
+                                                src="https://cdn.lordicon.com/ternnbni.json"
+                                                trigger="hover"
+                                                style="width:45px;height:45px">
+                                            </lord-icon>
+                                            </button>  
+                                        </div> 
+                                       
+                                </form>
+                 
+               </div>
+            
+                   
+            </div>
+         </section>
+</div>
+{% endblock container %}         

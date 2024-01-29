@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr 20px;
+    grid-template-areas: "sidebar main"
+                         "sidebar footer"  ;
+}
+
+main{
+    background-color: f9f5e7;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar{
+    background-color: #f9f5e7;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid;
+    border-color: #e3d2d6;
+    
+
+}
+footer{
+    background-color: #f9f5e7;
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 550px) {
+
+    .container{
+               grid-template-columns: 1fr;
+               grid-template-rows: auto 1fr auto;
+               grid-template-areas:
+                                    "sidebar"
+                                    "main"
+                                    "footer" ;
+     }
+
+    .chatbox{width:100vh}
+    .inputbox{width:100vh}
+    
+    .chat-bar-input-block{
+        width: 100%;
+    }
+
+}
+
+#plusimg{
+    margin-top: 45px;
+}
+#homelogo{
+    position: absolute;
+    top: -10px;
+    left: 100px;
+    width: 150px;
+}
+.navicons{
+    width: 30px;
+    background-color: #f9f5e7;
+    padding: 12px;
+    margin: 0px 15px;
+    border-radius: 12px;
+
+}
+.navicons:hover{
+    background-color: #f8ead8;
+}
+
+.chatbox{
+    overflow: auto;
+    position: relative;
+    background-color:#f9f5e7;
+    height: 100vh;
+    width: 750px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.chat-container {
+    
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    width: 750px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    margin-left: 15px;
+    position: sticky;
+    display: flex;
+    float: left;
+    box-sizing: content-box;
+    justify-content: space-between;
+    width:85% ;
+    bottom:0;
+    align-items: center;
+    background-color:white;
+    border-radius: 30px;
+    padding: 10px 0px 10px 10px;
+    z-index: 999;
+    box-shadow:  0px 5px 5px #cab9bd;
+    margin: 1.2%;
+    
+   
+}
+
+.chat-bar-input-block:hover{
+    box-shadow: none;
+    border: 1px solid;
+    border-color:  #e3d2d6 ;
+}
+
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+    width: 75%;
+   
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+    background-color: white;
+    outline: none;
+    
+
+   
+}
+
+.userText {
+    color: #4d3137;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #eddbc7;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #4d3137;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #f9f5e7;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+
+
+.micbtn{
+    margin-left: 5;
+    border: none;
+    border-radius: 23px;
+    padding: 5px;
+    background-color: #f9f5e7;
+    
+}
+
+.micbtn:hover{
+    background-color: #eddbc7;
+}
+
+.arrowbtn{
+    border: none;
+    background-color: white;
+    display: inline;
+    cursor: pointer;
+
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+   
+}
