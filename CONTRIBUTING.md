@@ -36,11 +36,11 @@ Thank you for considering contributing to the Interview Simulator AI project! We
 
 ## Reporting Issues
 
-If you encounter any issues or have suggestions, please open an [issue](https://github.com/original-username/interview-simulator-ai/issues) on the GitHub repository. When reporting issues, provide detailed information about the problem and steps to reproduce it.
+If you encounter any issues or have suggestions, please open an [issue](https://github.com/original-username/Interview-AI/issues) on the GitHub repository. When reporting issues, provide detailed information about the problem and steps to reproduce it.
 
 ## Feature Requests
 
-We welcome suggestions for new features! Please open an [issue](https://github.com/original-username/interview-simulator-ai/issues) to propose and discuss your ideas.
+We welcome suggestions for new features! Please open an [issue](https://github.com/original-username/Interview-AI/issues) to propose and discuss your ideas.
 
 ## Testing
 
