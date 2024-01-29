@@ -50,7 +50,7 @@ Our vision for the project includes:
 - Implementing user customization options for interview simulations.
 - Integrating additional voice-to-text and text-to-voice models.
 
-Check out our [Roadmap](docs/roadmap.md) for more details.
+Check out our [Roadmap](roadmap.md) for more details.
 
 ## License
 
