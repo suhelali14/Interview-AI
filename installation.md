@@ -52,7 +52,7 @@ If there are additional steps or configurations needed, please provide them here
 
 ## Troubleshooting
 
-If you encounter any issues during the installation process, check the [Troubleshooting](troubleshooting.md) guide for common problems and solutions.
+If you encounter any issues during the installation process, check the [Troubleshooting](TROUBLESHOOTING.md) guide for common problems and solutions.
 
 ## Contributing
 
