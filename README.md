@@ -28,7 +28,7 @@ To get started with the Interview Simulator AI project, follow these steps:
 4. Activate virtual environment: `source venv/bin/activate` (Linux/Mac) or `venv\Scripts\activate` (Windows)
 5. Run the application: `python manage.py runserver`
 
-For more detailed instructions, check out our [Installation Guide](docs/installation.md).
+For more detailed instructions, check out our [Installation Guide](installation.md).
 
 ## Contributing
 
