@@ -26,7 +26,7 @@ Thank you for considering contributing to the Interview Simulator AI project! We
     git push origin feature-name
     ```
 
-6. Open a pull request on the [original repository](https://github.com/original-username/interview-simulator-ai) and describe your changes.
+6. Open a pull request on the [original repository](https://github.com/suhelali14/Interview-AI) and describe your changes.
 
 ## Code Style and Guidelines
 
